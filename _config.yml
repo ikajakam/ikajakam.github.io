@@ -14,7 +14,7 @@ timezone: Asia/Calcutta
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Surapura # the main title
+title: ikajakam # the main title
 
 tagline: "<span style=\"color: rgb(253, 98, 1);\">Pentester | Web Developer भारतीय</span>"
 
@@ -23,10 +23,10 @@ description: >- # used by seo meta and the atom feed
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
-#url: "https://surapura.github.io"
+#url: "https://ikajakam.github.io"
 
 github:
-  username: surapura # change to your github username
+  username: ikajakam # change to your github username
 
 #twitter:
    #username:  # change to your twitter username
@@ -34,12 +34,12 @@ github:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Surapura
+  name: ikajakam
   email: support@surapura.in # change to your email address
   links:
     # The first element serves as the copyright owner's link
     #- https://twitter.com/username # change to your twitter homepage
-    - https://github.com/surapura # change to your github homepage
+    - https://github.com/ikajakam # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
