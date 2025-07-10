@@ -1,5 +1,5 @@
 ---
-title: "Alzheimer  Writeup HackMyVM"
+title: "Alzheimer Writeup HackMyVM"
 date: 2025-07-10 00:00:00 +0530
 categories: [Write Up,  HackMyVM] 
 tags: [Privilege Escalation, SSH, Binary Exploitation, Port Knocking]
