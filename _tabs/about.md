@@ -4,4 +4,4 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-## Pentester
+#### <span style=\"color: rgb(253, 98, 1);\">Offensive Security Expert</span>
