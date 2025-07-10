@@ -1,7 +1,6 @@
 ---
 title: "From Confusion to First Bounty💸"
 date: 2025-07-10 00:00:00 +0530
-author: "ikajakam"
 categories: [Bug Bounty]
 tags: [Pentesting, bug bounty, blog]
 ---
