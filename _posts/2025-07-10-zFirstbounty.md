@@ -91,10 +91,9 @@ _Things didn’t truly click until I actually started applying them._
 -   Confused about SSRF? Build a local vulnerable lab or test it live (ethically).
 
 ### One of the biggest level-ups in my learning came when I started **building my own stuff** — even if it was super basic.
-To understand how APIs work, I created a **simple API lab  
-[**_https://tarkash.surapura.in_**](https://tarkash.surapura.in/) — nothing fancy, just endpoints, token generation and protected routes and **that changed everything**.
+To understand how APIs work, I created a simple API lab [**_https://tarkash.surapura.in_**](https://tarkash.surapura.in/) — nothing fancy, just endpoints, token generation and protected routes and **that changed everything**.
 
-I finally began to **see the flow**:
+I finally began to **see the flow** :
 
 -   How **tokens** (JWTs or random) are generated post-login and validated on each request.
 -   What happens when you send an `Authorization: Bearer <token>` — how the server checks and grants access.
