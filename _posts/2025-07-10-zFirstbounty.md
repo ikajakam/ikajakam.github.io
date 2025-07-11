@@ -32,7 +32,7 @@ I was learning slowly and figuring things out on my own… until I came across a
 Hemantsolo’s guidance gave me deep insight into core web vulnerabilities like  Broken Authentication, Injection Methodologies and CSRF. He’s someone who truly stands out for his **practical teaching style** — breaking down complex concepts into real-world scenarios. His ability to teach through **real application logic** and not just theory played a huge role in how I approach bugs today.
 
 ### Community Is Everything
-I started actively hunting and engaging in [XXSRAT’s Discord server](https://discord.gg/n3jyM99W) **_(_**[**_https://discord.gg/n3jyM99W**](https://discord.gg/n3jyM99W)**_)_** — a space buzzing with real hunters who were consistently reporting bugs, sharing insights, and discussing live targets. I had live hunting sessions with XXSRAT where I got to observe and learn practical exploitation techniques, especially around IDOR and BAC workflows and even reported bugs with him and b3ludan. That’s where the thrill began!
+I started actively hunting and engaging in [XXSRAT’s Discord server](https://discord.gg/n3jyM99W) **_(_**[**_https://discord.gg/n3jyM99W_**](https://discord.gg/T5G7QVtG)**_)_** — a space buzzing with real hunters who were consistently reporting bugs, sharing insights, and discussing live targets. I had live hunting sessions with XXSRAT where I got to observe and learn practical exploitation techniques, especially around IDOR and BAC workflows and even reported bugs with him and b3ludan. That’s where the thrill began!
 
 To top it off, **Cyber Crusade** sessions on **BAC and IDOR** really helped solidify those concepts — and they paid off in the field.
 
