@@ -151,6 +151,20 @@ Build your CSRF PoC to **mimic legit UI**. Then:
 | 2FA Disable | /security/2fa/disable |
 | API Token Revoke | /api/tokens/revoke |
 | Support Ticket Creation | /support/ticket/new |
+
+| Feature | Example Endpoint |
+|--|--|
+| Change email  | /account/update-email |
+| Change password | /account/change-password
+| Add/delete SSH keys | /account/ssh-keys/add
+| Add credit card | /billing/add-payment
+| Enable/disable 2FA | /security/2fa/toggle
+| Delete droplets | /droplets/delete
+| Add team members| /teams/invite
+| Create support ticket | Create support ticket
+| Change billing address | /billing/update-address
+
+
 - Always check for legacy versions : e.g. `/v1/` , `/old/`, `/admin/` , `/mobile-api/`
 
 ### Next Move
