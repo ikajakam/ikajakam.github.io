@@ -1,6 +1,6 @@
 ---
 title: "CSRF Testing Out-of-the-Box"
-date: 2025-07-12 00:00:00 +0530
+date: 2025-07-14 00:00:00 +0530
 categories: [Vulnerability, CSRF]
 tags: [Pentesting, Bug Bounty, CSRF, Vulnerability]
 ---
