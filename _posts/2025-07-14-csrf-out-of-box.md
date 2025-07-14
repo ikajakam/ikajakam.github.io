@@ -134,7 +134,7 @@ Build your CSRF PoC to **mimic legit UI**. Then:
 -   🛠 **CSRFScanner plugin** (automates PoC generation)
 -   🧪 **Autorize** (for IDOR/CSRF combo testing)
 -   🔬 **CORSy** (for automated CORS testing)
--   ⚔️ **[Corsy.py](http://Corsy.py) + SameSiteTest** (check cookie SameSite status programmatically)
+-   ⚔️ **Corsy.py + SameSiteTest** (check cookie SameSite status programmatically)
 
 ### Bonus — Custom Burp Macro to Strip CSRF Token
 
