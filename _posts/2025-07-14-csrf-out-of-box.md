@@ -144,13 +144,13 @@ Build your CSRF PoC to **mimic legit UI**. Then:
 4.  Use **Burp macros + session handling rules** to automate this during active scans.
 
 ### Target Zones
-|Area|Endpoint Guess  |
+|Area | Endpoint Guess |
 |--|--|
-|Account Deletion  |/billing/update  |
-|SSH Key Add|/ssh/add
-|2FA Disable|/security/2fa/disable
-|API Token Revoke|/api/tokens/revoke
-|Support Ticket Creation|/support/ticket/new
+| Account Deletion | /billing/update  |
+| SSH Key Add | /ssh/add|
+| 2FA Disable | /security/2fa/disable |
+| API Token Revoke | /api/tokens/revoke |
+| Support Ticket Creation | /support/ticket/new |
 - Always check for legacy versions : e.g. `/v1/` , `/old/`, `/admin/` , `/mobile-api/`
 
 ### Next Move
