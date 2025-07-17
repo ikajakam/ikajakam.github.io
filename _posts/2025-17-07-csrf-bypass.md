@@ -234,9 +234,9 @@ Firefox Multi-Container   >         Simulate cross-origin sessions
 ### Summary
 
 
-|Bypass Technique | Bypasses | Fix
+|Bypass Technique | Bypasses | Fix |
 |--|--|
-|1. Reusable Token | Token mismanagement | Per-request, per-user token
+|1. Reusable Token | Token mismanagement | Per-request, per-user token |
 |2. Missing/Weak SameSite | Cross-origin cookie leakage | Set SameSite=Strict
 |3. JSON CSRF | API not protected | CSRF token for all state-changing requests
 |4. Referer/Origin Weak Check | SHeader spoofing/redirection | Use CSRF tokens instead
