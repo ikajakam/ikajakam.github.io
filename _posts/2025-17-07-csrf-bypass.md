@@ -118,7 +118,7 @@ Full API control via CSRF — often works if **backend has weak CORS + no token*
 
 App validates the `Referer` or `Origin` headers to allow the request.
 
-```html
+```js
 Referer: <https://target.com/account/change-password> 
 ```
 
