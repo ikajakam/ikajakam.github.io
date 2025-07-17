@@ -43,8 +43,7 @@ The CSRF token is:
 
 ### Endpoint :
 ```json
-POST /account/update-email
-csrf_token=123456&email=attacker@evil.com
+POST /account/update-email csrf_token=123456&email=attacker@evil.com
 ```
 ### Impact :
 If an attacker can **obtain or guess** the token, they can send a CSRF request with a valid token and bypass protection.
@@ -65,7 +64,7 @@ Set-Cookie: session=xyz; SameSite=None
 POST /user/change-password
 ```
 
-> Test using your CSRF PoC: if cookies are sent, this may work.
+- Test using your CSRF PoC : if cookies are sent, this may work.
 
 ### Impact:
 
@@ -73,7 +72,7 @@ POST /user/change-password
 
 ### 3. JSON CSRF (a.k.a. JSON Hijacking)
 
-### 🔓 Scenario:
+###  Scenario:
 
 Application uses JSON API:
 
@@ -107,19 +106,19 @@ fetch('<https://target.com/api/change-email>', {
 
 ```
 
-### 🎯 Impact:
+###  Impact:
 
 Full API control via CSRF — often works if **backend has weak CORS + no token**.
 
 
 ## 4. Referer Header Check Bypass
 
-### 🔓 Scenario:
+### Scenario:
 
 App validates the `Referer` or `Origin` headers to allow the request.
 
 ```json
-Referer: <https://target.com/account/change-password>
+Referer: <https://target.com/account/change-password> 
 ```
 
 ### But :
