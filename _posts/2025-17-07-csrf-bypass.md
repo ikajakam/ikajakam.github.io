@@ -225,12 +225,21 @@ If a site **allows login via POST**, and doesn’t have CSRF protection on login
 ###  Testing Tips : 
 
 ```
-Burp Suite                >   Intercept and repeat POSTs, modify CSRF tokens
-DevTools                  >   Observe network requests, token presence
-Cookie Editor             >   View and edit SameSite attributes
-Custom HTML PoC           >   Test auto-submission
-Firefox Multi-Container   >   Simulate cross-origin sessions
+Burp Suite                >         Intercept and repeat POSTs, modify CSRF tokens
+DevTools                  >         Observe network requests, token presence
+Cookie Editor             >         View and edit SameSite attributes
+Custom HTML PoC           >         Test auto-submission
+Firefox Multi-Container   >         Simulate cross-origin sessions
 ```
 ### Summary
 
 
+|Bypass Technique | Bypasses | Fix
+|--|--|
+|1. Reusable Token | Token mismanagement | Per-request, per-user token
+|2. Missing/Weak SameSite | Cross-origin cookie leakage | Set SameSite=Strict
+|3. JSON CSRF | API not protected | CSRF token for all state-changing requests
+|4. Referer/Origin Weak Check | SHeader spoofing/redirection | Use CSRF tokens instead
+|5. Misconfigured CORS | Open CORS + cookies | Disallow credentials or restrict origins
+|6. Multi-step | No token on one step | Token on every state-changing step
+|7. Login CSRF | No CSRF on login | CSRF tokens for login too
