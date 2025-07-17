@@ -43,7 +43,8 @@ The CSRF token is:
 
 ### Endpoint :
 ```json
-POST /account/update-email csrf_token=123456&email=attacker@evil.com
+POST /account/update-email 
+csrf_token=123456&email=attacker@evil.com
 ```
 ### Impact :
 If an attacker can **obtain or guess** the token, they can send a CSRF request with a valid token and bypass protection.
