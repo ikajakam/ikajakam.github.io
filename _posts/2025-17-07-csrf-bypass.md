@@ -51,7 +51,7 @@ If an attacker can **obtain or guess** the token, they can send a CSRF request w
 
 ### 2. SameSite Cookie Misconfig
 
-### Scenario:
+### Scenario :
 
 Cookie is not marked as `SameSite` or is set to `SameSite=None` without `Secure`.
 
@@ -61,19 +61,19 @@ Set-Cookie: session=xyz; SameSite=None
 
 ###  Endpoint:
 
-```graphql
+```html
 POST /user/change-password
 ```
 
 - Test using your CSRF PoC : if cookies are sent, this may work.
 
-### Impact:
+### Impact :
 
 **Login session** is used in a forged request from another origin.
 
 ### 3. JSON CSRF (a.k.a. JSON Hijacking)
 
-###  Scenario:
+###  Scenario :
 
 Application uses JSON API:
 
@@ -82,7 +82,7 @@ POST /api/change-email
 Content-Type: application/json
 ```
 
-Protection fails if:
+Protection fails if :
 
 -   Token is not required
 -   CORS not enforced correctly
@@ -92,7 +92,7 @@ Browser auto-sends cookies even for JSON unless:
 -   `SameSite` blocks it
 -   CORS blocks it
 
-###  Trick:
+###  Trick :
 
 Use JavaScript to submit JSON:
 
@@ -107,14 +107,14 @@ fetch('<https://target.com/api/change-email>', {
 
 ```
 
-###  Impact:
+###  Impact :
 
 Full API control via CSRF — often works if **backend has weak CORS + no token**.
 
 
 ## 4. Referer Header Check Bypass
 
-### Scenario:
+### Scenario :
 
 App validates the `Referer` or `Origin` headers to allow the request.
 
@@ -128,7 +128,7 @@ Referer: <https://target.com/account/change-password>
 -   Some misconfigured proxies allow header manipulation
 -   Intra-site redirection tricks can be used
 
-###  Trick:
+###  Trick :
 
 Host a redirector on a subdomain like:
 
@@ -149,13 +149,13 @@ Referer.startsWith("<https://target.com>")
 
 ### 5. CORS Misconfiguration
 
-###  Scenario:
+###  Scenario :
 
 -   App allows cross-origin `POST`
 -   `Access-Control-Allow-Origin: *`
 -   Cookies sent with request (missing `Access-Control-Allow-Credentials: true` block)
 
-###  Trick:
+###  Trick :
 
 Craft a `fetch()` request to sensitive endpoint with credentials:
 
@@ -166,18 +166,18 @@ fetch("<https://target.com/api/delete-account>", {
 });
 ```
 
-###  Impact:
+###  Impact :
 
 CORS + CSRF = full account hijack.
 
 ###  6. Multi-Step CSRF
 
-###  Scenario:
+###  Scenario :
 
 1.  Step 1: `GET /start-change` — CSRF-safe
 2.  Step 2: `POST /confirm-change` — lacks protection
 
-###  Trick:
+###  Trick :
 
 Auto-submit both steps from your page :
 
@@ -196,13 +196,13 @@ Auto-submit both steps from your page :
 </script>
 ```
 
-###  Impact:
+###  Impact :
 
 By chaining steps, attacker executes a CSRF that bypasses step-based protections.
 
 ### 7. Login CSRF
 
-###  Scenario:
+###  Scenario :
 
 If a site **allows login via POST**, and doesn’t have CSRF protection on login form, an attacker can:
 
@@ -216,7 +216,7 @@ If a site **allows login via POST**, and doesn’t have CSRF protection on login
 </form>
 ```
 
-###  Impact:
+###  Impact :
 
 -   Session fixation
 -   Victim uses attacker account
