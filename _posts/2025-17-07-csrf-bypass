@@ -1,0 +1,16 @@
+---
+title: "CSRF Bypass Techniques (Deep Dive)"
+date: 2025-07-17 00:00:00 +0530
+categories: [Vulnerability, CSRF]
+tags: [Pentesting, Bug Bounty, CSRF, Vulnerability]
+---
+
+| Technique |Protection Bypassed | Scenario |
+|--|--|
+|1. Token Reuse or Leak  | Static or predictable CSRF tokens | Token is same across users or pages |
+|2. Misconfigured SameSite | SameSite set to None or missing | Cookies sent in cross-origin requests
+|3. JSON CSRF | Tokens not enforced on application/json | No CORS preflight + cookies auto-sent
+|4. Referer Header Bypass | Server uses referer as CSRF check | Header can be spoofed in some edge cases
+|5. CORS Misconfiguration| Trusts Origin without validating Credentials | Requests with cookies from cross-origin go through
+|6. Multi-step CSRF | Each request step is CSRF-safe but chain allows state-change | Combine endpoints
+|7. Login CSRF | CSRF used on login to set known creds | No anti-CSRF on login form
