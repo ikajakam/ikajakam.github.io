@@ -5,8 +5,7 @@ categories: [Vulnerability, SSRF]
 tags: [Pentesting, Bug Bounty, SSRF, Vulnerability]
 ---
 
-# SSRF Bypass Payload Arsenal
-These help bypass SSRF filters or reach internal services despite basic protections.
+**These help bypass SSRF filters or reach internal services despite basic protections.**
 
 ### Common SSRF Filters You Might Face
 -   Allowlist/Blacklist of domain or IP
