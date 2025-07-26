@@ -14,8 +14,9 @@ tags: [Pentesting, Bug Bounty, SSRF, Vulnerability]
 -   Schema restrictions (`http` only)
 
 ### IP Obfuscation Tricks
+
 | Format | Payload Example | Purpose |
-|--|--|--|
+|--|--|
 | Decimal | http://2130706433/ | 2130706433 = 127.0.0.1 |
 | Hex | http://0x7f000001/ | Same as 127.0.0.1 |
 | Octal | http://0177.0.0.1/ | Works if octal parsing is enabled |
@@ -46,6 +47,7 @@ tags: [Pentesting, Bug Bounty, SSRF, Vulnerability]
 ```bash
 http://evil.com/redirect?next=http://127.0.0.1/
 ```
+
 | Trick | Description |
 |--|--|
 | Open Redirect + SSRF | Combine vulnerable redirect to reach internal resources |
